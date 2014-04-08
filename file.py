@@ -1,6 +1,6 @@
 my_output_file = open("hello.txt", "a")
 
-lines_to_write = ["line1", "line2"]
+lines_to_write = ["line1\n", "line2"]
 
 my_output_file.writelines(lines_to_write)
 
@@ -15,4 +15,5 @@ for line in my_input_file.readlines():
 my_input_file.close()
 
 with open("hello.txt", "r") as my_input_file:
-	print my_input_file.readlines()
+	for line in my_input_file.readlines():
+		print line
